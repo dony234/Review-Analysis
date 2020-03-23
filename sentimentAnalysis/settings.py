@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'senti',
-    'demoapp'
 ]
 
 MIDDLEWARE = [
@@ -77,11 +76,7 @@ WSGI_APPLICATION = 'sentimentAnalysis.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'datab',
-        'USERNAME' : 'root',
-        'PASSWORD' : 'password',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
